@@ -375,3 +375,5 @@ dist
 # End of https://www.toptal.com/developers/gitignore/api/node
 
 /public
+webpack.config.js
+package-lock.json
