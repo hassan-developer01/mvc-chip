@@ -1,6 +1,6 @@
 import ViewBase from "./ViewBase";
 
-class View extends ViewBase {
+export class View extends ViewBase {
   /**
    * @constructor
    * @param {string} selector
@@ -23,4 +23,4 @@ class View extends ViewBase {
   }
 }
 
-export default View;
+export default View

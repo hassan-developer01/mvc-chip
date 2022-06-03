@@ -1,6 +1,6 @@
 import ControllerBase from "./ControllerBase";
 
-class Controller extends ControllerBase {
+export class Controller extends ControllerBase {
   /**
    * Render controller
    *

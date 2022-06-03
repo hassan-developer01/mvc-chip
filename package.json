@@ -2,6 +2,7 @@
   "name": "mvc-chip",
   "version": "1.0.0",
   "description": "MVC Chip Framework",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hassan-developer01/mvc-chip.git"

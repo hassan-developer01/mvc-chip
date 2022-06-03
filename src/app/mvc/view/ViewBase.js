@@ -70,14 +70,29 @@ class ViewBase {
   /**
    * Make element and set operation of it
    * @param {keyof HTMLElementTagNameMap} tagName
-   * @param {(parent: View|ViewBase, element: View) => void} callback
+   * @param {(element: View) => void} callback
    */
   make(tagName, callback) {
     const view = new View();
 
     view.create(tagName);
 
-    callback(this, view);
+    this.dom.append(view);
+
+    callback(view);
+  }
+
+  /**
+   * Make element and set operation of it
+   * @param {keyof HTMLElementTagNameMap} tagName
+   * @return View
+   */
+  mkView(tagName) {
+    const view = new View();
+
+    view.create(tagName);
+
+    return view;
   }
 
   /**

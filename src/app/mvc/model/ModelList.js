@@ -1,6 +1,6 @@
 import ModelBase from "./ModelBase";
 
-class ModelList extends ModelBase {
+export class ModelList extends ModelBase {
   /**
    * @desc Array of data
    * @type {[]}
@@ -37,18 +37,17 @@ class ModelList extends ModelBase {
   }
 
   /**
-   * @desc Update item if exist
-   * @param id
-   * @param item
+   * Update item if exist
+   * @param {number} id
+   * @param {(item: *) => void} callback
    */
-  update(id, item) {
-    const idx = this.data.findIndex(item => item.id === id);
+  update(id, callback) {
+    const item = this.data.find(item => item.id === id);
 
-    if (idx !== -1) {
-      this.data[idx] = JSON.parse(JSON.stringify(item));
+    if (item) {
+      callback(item);
+      this.set(this.data);
     }
-
-    this.set(this.data);
   }
 
   /**
